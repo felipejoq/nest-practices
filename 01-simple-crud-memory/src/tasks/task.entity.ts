@@ -8,11 +8,11 @@ export class Task {
   description: string
   status: TaskStatusType
 
-  constructor(title:string, description:string) {
+  constructor(title:string, description:string, status: TaskStatusType) {
     this.id = Math.floor(Date.now() * Math.random());
     this.title = title;
     this.description = description;
-    this.status = TaskStatus.PENDING;
+    this.status = status;
   }
  
 }

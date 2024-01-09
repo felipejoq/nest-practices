@@ -1,8 +1,7 @@
 import { Body, Controller, Delete, Get, Param, ParseIntPipe, Post, Put, Query } from '@nestjs/common';
 import { TasksService } from './tasks.service'
-import { CreateTaskDto } from './dtos/create.dto';
+import { TaskDto } from './dtos/task.dto';
 import { QueryPaginateTask } from 'src/tasks/types/tasks';
-import { UpdateTaskDto } from './dtos/update.dto';
 
 @Controller('tasks')
 export class TasksController {
@@ -21,14 +20,14 @@ export class TasksController {
   }
 
   @Post()
-  createTask(@Body() createTaskDto: CreateTaskDto) {
-    const newTask = this.taskService.createTask(createTaskDto)
+  createTask(@Body() taskDto: TaskDto) {
+    const newTask = this.taskService.createTask(taskDto)
     return newTask;
   }
 
   @Put(':id')
-  updateTask(@Param('id', ParseIntPipe) id: number, @Body() updateTaskDto: UpdateTaskDto){
-    return this.taskService.updateTask(id, updateTaskDto);
+  updateTask(@Param('id', ParseIntPipe) id: number, @Body() taskDto: TaskDto){
+    return this.taskService.updateTask(id, taskDto);
   }
 
   @Delete(':id')
