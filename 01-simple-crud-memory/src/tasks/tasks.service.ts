@@ -1,6 +1,6 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { Task } from './task.entity';
-import { TaskDto } from './dtos/task.dto';
+import { UpdateTaskDto, CreateTaskDto } from './dtos';
 import { TaskStatus } from './const/task';
 
 @Injectable()
@@ -24,19 +24,17 @@ export class TasksService {
     return taskFinded;
   }
 
-  createTask(taskDto: TaskDto) {  
-    const { title, description, status } = taskDto;
+  createTask(taskDto: CreateTaskDto) {
+    const createTaskDto = new CreateTaskDto(taskDto.title, taskDto.description)
+    const { title, description, status } = createTaskDto;
     const newTask = new Task(title, description, status);
     this.tasks.push(newTask);
     return newTask;
   }
 
-  updateTask(id: number, taskDto: TaskDto) {
+  updateTask(id: number, taskDto: UpdateTaskDto) {
     const taskExists = this.getTaskById(id);
-    const { title, description, status } = taskDto;
-    taskExists.title = title;
-    taskExists.description = description;
-    taskExists.status = status;
+    Object.assign(taskExists, taskDto);
     return taskExists;
   }
 
