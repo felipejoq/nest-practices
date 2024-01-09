@@ -1,4 +1,4 @@
-import { TaskStatus } from "src/const/task";
+import { TaskStatus } from "src/tasks/const/task";
 
 export interface QueryPaginateTask {
   limit: number;

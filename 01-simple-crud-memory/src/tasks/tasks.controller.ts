@@ -1,7 +1,7 @@
 import { Body, Controller, Delete, Get, Param, ParseIntPipe, Post, Put, Query } from '@nestjs/common';
 import { TasksService } from './tasks.service'
 import { CreateTaskDto } from './dtos/create.dto';
-import { QueryPaginateTask } from 'src/types/tasks';
+import { QueryPaginateTask } from 'src/tasks/types/tasks';
 import { UpdateTaskDto } from './dtos/update.dto';
 
 @Controller('tasks')

@@ -1,5 +1,5 @@
-import { TaskStatus } from "src/const/task";
-import { TaskStatus as TaskStatusType } from "src/types/tasks";
+import { TaskStatus } from "src/tasks/const/task";
+import { TaskStatus as TaskStatusType } from "src/tasks/types/tasks";
 
 export class Task {
 
