@@ -1,8 +1,8 @@
-import { IsEnum, IsIn, IsNotEmpty, IsOptional, IsString, MinLength, isNotEmpty } from 'class-validator';
+import { IsEnum, IsNotEmpty, IsString, MinLength } from 'class-validator';
 import { TaskStatus } from '../types/tasks';
 import { TaskStatus as TaskStatusAccepted } from '../const/task';
 
-export class TaskDto {
+export class UpdateTaskDto {
 
   @IsNotEmpty({ message: 'El título es requerido' })
   @IsString({ message: 'El título debe ser un texto' })
