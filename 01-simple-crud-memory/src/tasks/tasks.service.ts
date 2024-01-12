@@ -1,5 +1,5 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
-import { Task } from './task.entity';
+import { Task } from './entities/task.entity';
 import { UpdateTaskDto, CreateTaskDto } from './dtos';
 import { TaskStatus } from './const/task';
 
