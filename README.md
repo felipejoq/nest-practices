@@ -14,3 +14,10 @@ Este repositorio contiene ejercicios realizados con Nest.js
 
 - Incluye desarrollo básico con Nest.js repasando los siguientes conceptos:
   - DTOs, Interfaces, Anotaciones, Exception filters, Validations and Parse Pipes, HTTP Requests (GET, POST, PATCH, PUT, DELETE).
+
+>4. [Pokedex - Nest.js + Mongo](./04-nest-pokedex/)
+
+- Forma rápida para conectar la aplicación de Nest.js con un SGDB como Mongo en este caso.
+- Usa la implementación propia de Nest.js para trabajar con mongoose como ORM
+- La base de datos es proveida por un Docker Container configurado en el archivo [Docker](./04-nest-pokedex/docker-compose.yaml)
+- Sirve contenido estático y añade un prefijo a la URL global del API RESTful
