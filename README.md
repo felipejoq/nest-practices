@@ -26,6 +26,6 @@ Este repositorio contiene ejercicios realizados con Nest.js
 
 - Uso de base de datos relacional (PostgreSQL + TypeORM)
 - Subida de archivos
-- Creación de guards y decoradores.
-- Autenticación y Autorización de usuarios.
+- Creación de guards y decoradores, agrupación de los mismos.
+- Autenticación y Autorización de usuarios con JWT usando Passport.
 - Introducción a los websockets.
