@@ -28,4 +28,4 @@ Este repositorio contiene ejercicios realizados con Nest.js
 - Subida de archivos
 - Creación de guards y decoradores, agrupación de los mismos.
 - Autenticación y Autorización de usuarios con JWT usando Passport.
-- Introducción a los websockets.
+- Introducción a los websockets (Pequeño chat).
